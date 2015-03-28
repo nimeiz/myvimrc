@@ -201,7 +201,13 @@ vnoremap  *  y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 vnoremap  #  y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 
 " 窗口间的移动设置。
-map <Leader>w <C-W>w
+map <Leader>ww <C-W>w
+" = 把鼠标放在竖分格上往左拖
+map <Leader>w, 10<C-W><
+" = 把鼠标放在竖分格上往右拖
+map <Leader>w. 10<C-W>>
+" 关闭当前窗口
+map <Leader>wc <C-W>c
 " map <C-j> <C-W>j
 " map <C-k> <C-W>k
 " map <C-l> <C-W>l
@@ -211,6 +217,7 @@ map <Leader>w <C-W>w
 " map <C-kMinus> <C-w>-
 " map <C-S-kPlus> <C-w>_
 " map <C-S-kMinus> <C-w>_
+
 
 "在命令行模式下，用Ctrl+V贴入寄存器"中的内容
 cmap <C-V> <C-R>"
@@ -240,7 +247,8 @@ vmap <Leader>h4 I#### <ESC>gv
 map <Leader>h5 <ESC>I##### <ESC>
 vmap <Leader>h5 I##### <ESC>gv
 " 分格线
-map <Leader>fgx I* * *<ESC>o<ESC>
+map <Leader>fgx o* * *<ESC>o<ESC>
+
 "-------------------------------------------
 
 set diffexpr=MyDiff()
@@ -307,6 +315,19 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" ftplugin/mkd.vim : line 315 : let &winwidth=(&columns/4)  
+" 这样子 :Toc的时候不会占半个屏，占1/4个屏
+" 原本为2
+
+" spring 配色方案
+Plugin 'spring.vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
+" 安装插件们： 
+" 运行vim之后  :PluginInstall
+
+"把安装的spring配色用起来
+" colorscheme spring
 "-------------------------------------------
+
