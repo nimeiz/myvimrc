@@ -184,8 +184,63 @@ set foldcolumn=0
 " @see http://blog.sina.com.cn/s/blog_46dac66f010006db.html
 set ambiwidth=double
 
-set guifont=Microsoft_Yahei_Mono:h10:cANSI, 
-set guifontwide=Microsoft_Yahei_Mono:h10:cANSI, 
+set guifont=Microsoft_Yahei_Mono:h10:cANSI,Fixedsys:h12
+set guifontwide=Microsoft_Yahei_Mono:h10:cANSI,Fixedsys:h12
+"-------------------------------------------
+
+
+"-------------------------------------------
+"   快捷键
+"-------------------------------------------
+"选中文本时通过TAB与Shift+TAB缩进
+vmap <tab> >gv
+vmap <s-tab> <gv
+
+" 选中一段文字并全文搜索这段文字
+vnoremap  *  y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
+vnoremap  #  y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
+
+" 窗口间的移动设置。
+map <Leader>w <C-W>w
+" map <C-j> <C-W>j
+" map <C-k> <C-W>k
+" map <C-l> <C-W>l
+" map <C-h> <C-W>h
+" 
+" map <C-kPlus> <C-w>+
+" map <C-kMinus> <C-w>-
+" map <C-S-kPlus> <C-w>_
+" map <C-S-kMinus> <C-w>_
+
+"在命令行模式下，用Ctrl+V贴入寄存器"中的内容
+cmap <C-V> <C-R>"
+"编译和运行java
+map <F3> :w<CR>:!javac %<CR><CR>
+map <F4> :!java %<<CR><CR>
+"窗口最大化，最小化，还原
+map <Leader>mx :simalt ~x<CR>
+map <Leader>mn :simalt ~n<CR>
+"recover
+map <Leader>re :simalt ~r<CR>
+
+" 重置字体设置
+map <Leader>fr :set guifont=<CR>:set gfw=<CR>
+
+"用Ctrl+D在插入模式下插入当前时间
+"imap <C-D> --<C-R>=strftime("%c")<CR>--
+imap <C-D> <C-R>=strftime("%Y-%m-%d %H:%M:%S %A")<CR>
+
+"markdown的标题
+map <Leader>h2 <ESC>I## <ESC>
+vmap <Leader>h2 I## <ESC>gv
+map <Leader>h3 <ESC>I### <ESC>
+vmap <Leader>h3 I### <ESC>gv
+map <Leader>h4 <ESC>I#### <ESC>
+vmap <Leader>h4 I#### <ESC>gv
+map <Leader>h5 <ESC>I##### <ESC>
+vmap <Leader>h5 I##### <ESC>gv
+" 分格线
+map <Leader>fgx I* * *<ESC>o<ESC>
 "-------------------------------------------
 
 set diffexpr=MyDiff()
@@ -212,7 +267,6 @@ function MyDiff()
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
-
 
 
 "-------------------------------------------
