@@ -306,7 +306,15 @@ Plugin 'gmarik/Vundle.vim'
 " https://github.com/plasticboy/vim-markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+" spring 配色方案
+Plugin 'spring.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+" 安装插件们： 
+" 运行vim之后  :PluginInstall
+
+"把安装的spring配色用起来
+colorscheme spring
 "-------------------------------------------
+
