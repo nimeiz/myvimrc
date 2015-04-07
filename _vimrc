@@ -322,6 +322,32 @@ Plugin 'plasticboy/vim-markdown'
 " spring 配色方案
 Plugin 'spring.vim'
 
+" 让gvim全屏的插件，通过 Vundle安装之后不太好使，需将gvimfullscreen.dll手动复制到与gvim.exe相同
+" 的目录
+Plugin 'gvimfullscreen_win32'
+
+" 让文字们居中显示
+Plugin 'junegunn/goyo.vim'
+" ##Usage
+" 
+" :Goyo
+" Toggle Goyo
+" :Goyo [width]
+" Turn on or resize Goyo
+" :Goyo!
+" Turn Goyo off
+" The window can be resized with the usual [count]<CTRL-W> + >, <, +, - keys.
+" 
+" ##Configuration
+" 
+" g:goyo_width (default: 80)
+" g:goyo_margin_top (default: 4)
+" g:goyo_margin_bottom (default: 4)
+" g:goyo_linenr (default: 0)
+let g:goyo_width=96
+let g:goyo_margin_top=2
+let g:goyo_margin_bottom=2
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " 安装插件们： 
@@ -330,4 +356,13 @@ filetype plugin indent on    " required
 "把安装的spring配色用起来
 " colorscheme spring
 "-------------------------------------------
+"
+
+" let g:MyVimLib = $VIMRUNTIME.'/gvimfullscreen.dll'
+" let g:MyVimLib = '~/vimfiles/bundle/gvimfullscreen_win32/gvimfullscreen.dll'
+" function ToggleFullScreen()
+"     call libcallnr(g:MyVimLib, "ToggleFullScreen", 0)
+" endfunction
+map <F11> <Esc>:set guioptions-=m<cr><Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+"map <F11> <Esc>:call ToggleFullScreen()<CR>
 
