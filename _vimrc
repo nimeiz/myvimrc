@@ -1,55 +1,56 @@
-"ÔËĞĞÔÚ·Ç¼æÈİ(VI)Ä£Ê½ÏÂ(ÃüÁîÄ£Ê½ÏÂ TAB ²¹È«)
+"è¿è¡Œåœ¨éå…¼å®¹(VI)æ¨¡å¼ä¸‹(å‘½ä»¤æ¨¡å¼ä¸‹ TAB è¡¥å…¨)
 set nocompatible
 
 "-------------------------------------------
-"   ÖĞÎÄÂÒÂë
+"   ä¸­æ–‡ä¹±ç 
 "-------------------------------------------
-"´¦ÀíÎÄ±¾ÖĞÏÔÊ¾ÂÒÂë
+"å¤„ç†æ–‡æœ¬ä¸­æ˜¾ç¤ºä¹±ç 
 set encoding=utf-8
-"Éè¶¨ÎÄ¼ş±àÂë
+"è®¾å®šæ–‡ä»¶ç¼–ç 
 "set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-set fileencodings=utf-8,chinese,latin-1
+"set fileencodings=utf-8,chinese,latin-1
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 "if has("win32")
 "    set fileencoding=chinese
 "else
 "    set fileencoding=utf-8
 "endif
 
-"´¦Àí²Ëµ¥¼°ÓÒ¼ü²Ëµ¥ÂÒÂë
+"å¤„ç†èœå•åŠå³é”®èœå•ä¹±ç 
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
-"´¦ÀíconsleÊä³öÂÒÂë
+"å¤„ç†consleè¾“å‡ºä¹±ç 
 language messages zh_CN.utf-8
 "-------------------------------------------
 
 
 "-------------------------------------------
-"   ±à¼­¡¢²Ù×÷ÓÅ»¯
+"   ç¼–è¾‘ã€æ“ä½œä¼˜åŒ–
 "-------------------------------------------
-"lcd d:/Yager_Files  "ÉèÖÃGvimÄ¬ÈÏÄ¿Â¼
-lcd d:/  "ÉèÖÃGvimÄ¬ÈÏÄ¿Â¼
-set bsdir=buffer    "Éè¶¨ÎÄ¼şä¯ÀÀÆ÷Ä¿Â¼Îªµ±Ç°Ä¿Â¼
-set autochdir       "Éè¶¨×Ô¶¯ÇĞ»»Ä¿Â¼
-"   ¶¨Òå<Leader>¼üÎª,£¬<Leader>Ä¬ÈÏÎª\
+"lcd d:/Yager_Files  "è®¾ç½®Gvimé»˜è®¤ç›®å½•
+lcd d:/  "è®¾ç½®Gvimé»˜è®¤ç›®å½•
+set bsdir=buffer    "è®¾å®šæ–‡ä»¶æµè§ˆå™¨ç›®å½•ä¸ºå½“å‰ç›®å½•
+set autochdir       "è®¾å®šè‡ªåŠ¨åˆ‡æ¢ç›®å½•
+"   å®šä¹‰<Leader>é”®ä¸º,ï¼Œ<Leader>é»˜è®¤ä¸º\
 let mapleader=","
 let maplocalleader=","
 
-"¼ì²âÎÄ¼şÀàĞÍ
+"æ£€æµ‹æ–‡ä»¶ç±»å‹
 filetype on
-"Õë¶Ô²»Í¬µÄÎÄ¼ş²ÉÓÃ²»Í¬µÄËõ½ø·½Ê½
+"é’ˆå¯¹ä¸åŒçš„æ–‡ä»¶é‡‡ç”¨ä¸åŒçš„ç¼©è¿›æ–¹å¼
 filetype indent on
-"ÔÊĞí²å¼ş,ÆôÓÃÎÄ¼şÀàĞÍ²å¼ş
+"å…è®¸æ’ä»¶,å¯ç”¨æ–‡ä»¶ç±»å‹æ’ä»¶
 filetype plugin on
-"Æô¶¯ÖÇÄÜ²¹È«,ÆôÓÃÕë¶ÔÎÄ¼şÀàĞÍµÄ×Ô¶¯Ëõ½ø
+"å¯åŠ¨æ™ºèƒ½è¡¥å…¨,å¯ç”¨é’ˆå¯¹æ–‡ä»¶ç±»å‹çš„è‡ªåŠ¨ç¼©è¿›
 filetype plugin indent on
 
-"¿ªÆôÓï·¨¸ßÁÁ¹¦ÄÜ
+"å¼€å¯è¯­æ³•é«˜äº®åŠŸèƒ½
 syntax enable
 syntax on
 
 "===Editing related===
-"²»Éè¶¨´ËÏîÊ±£¬ÔÚ²åÈë×´Ì¬ÎŞ·¨ÓÃÍË¸ñºÍdeleteÉ¾³ı»Ø³µ·û
+"ä¸è®¾å®šæ­¤é¡¹æ—¶ï¼Œåœ¨æ’å…¥çŠ¶æ€æ— æ³•ç”¨é€€æ ¼å’Œdeleteåˆ é™¤å›è½¦ç¬¦
 set whichwrap=b,s,<,>,[,]
 set mouse=a
 set selectmode=
@@ -57,14 +58,14 @@ set mousemodel=popup
 set keymodel=
 set selection=inclusive
 
-" ½»»»ÎÄ¼ş(swrap file)£¬×Ô¶¯±¸·İ(auto backup)ÉèÖÃ¡£
+" äº¤æ¢æ–‡ä»¶(swrap file)ï¼Œè‡ªåŠ¨å¤‡ä»½(auto backup)è®¾ç½®ã€‚
 set nobackup
 "if g:OS#win
     set directory=$VIM\tmp
 "else
 "    set directory=~/.tmp
 "endif
-" ³Ö¾Ã»¯³·ÏúÉèÖÃ¡£
+" æŒä¹…åŒ–æ’¤é”€è®¾ç½®ã€‚
 if has("persistent_undo")
     set undofile
     set undolevels=1000
@@ -82,105 +83,105 @@ endif
 
 
 "-------------------------------------------
-"   ½çÃæÓëÏÔÊ¾
+"   ç•Œé¢ä¸æ˜¾ç¤º
 "-------------------------------------------
-"ÅäÉ«·ç¸ñ
+"é…è‰²é£æ ¼
 "colorscheme pablo
 
-"¼ò½àÆô¶¯Ä£Ê½
+"ç®€æ´å¯åŠ¨æ¨¡å¼
 set shortmess=atI
-"Éè¶¨ GUI Ñ¡Ïî
-"set guioptions=gmrLtT  m:²Ëµ¥ T:¹¤¾ßÀ¸ t:¿ÉÒÔ¼ôÏÂµÄ²Ëµ¥
+"è®¾å®š GUI é€‰é¡¹
+"set guioptions=gmrLtT  m:èœå• T:å·¥å…·æ  t:å¯ä»¥å‰ªä¸‹çš„èœå•
 set guioptions=gmrL
-"ÃüÁîĞĞ¸ß¶È
+"å‘½ä»¤è¡Œé«˜åº¦
 set cmdheight=1
-"Éè¶¨ĞĞ¾à ( GUI ½çÃæÖĞÉúĞ§ )
+"è®¾å®šè¡Œè· ( GUI ç•Œé¢ä¸­ç”Ÿæ•ˆ )
 set linespace=0
-set wildmenu            "ÃüÁîĞĞ²¹È«ÒÔÔöÇ¿Ä£Ê½ÔËĞĞ£¨ÏÔÊ¾Ğ¡²Ëµ¥£©
-"set ruler               "ru,ÏÔÊ¾±ê³ß£¨×´Ì¬À¸ÓÒ±ß£©
-set showmatch           "sm,¶ÌÔİÌø×ªÆ¥ÅäµÄ¶ÔÓ¦À¨ºÅ
-" ×´Ì¬À¸¡£
+set wildmenu            "å‘½ä»¤è¡Œè¡¥å…¨ä»¥å¢å¼ºæ¨¡å¼è¿è¡Œï¼ˆæ˜¾ç¤ºå°èœå•ï¼‰
+"set ruler               "ru,æ˜¾ç¤ºæ ‡å°ºï¼ˆçŠ¶æ€æ å³è¾¹ï¼‰
+set showmatch           "sm,çŸ­æš‚è·³è½¬åŒ¹é…çš„å¯¹åº”æ‹¬å·
+" çŠ¶æ€æ ã€‚
 set laststatus=2
 set statusline=%t\ %1*%m%*\ %1*%r%*\ %2*%h%*%w%=[%l%3*/%L(%p%%)%*,%c%V]\ [%b:0x%B]\ [%{&ft==''?'TEXT':toupper(&ft)},%{toupper(&ff)},%{toupper(&fenc!=''?&fenc:&enc)}%{&bomb?',BOM':''}%{&eol?'':',NOEOL'}]
 "let &statusline=' %t %{&mod?(&ro?"*":"+"):(&ro?"=":" ")} %1*|%* %{&ft==""?"any":&ft} %1*|%* %{&ff} %1*|%* %{(&fenc=="")?&enc:&fenc}%{(&bomb?",BOM":"")} %1*|%* %=%1*|%* 0x%B %1*|%* (%l,%c%V) %1*|%* %L %1*|%* %P'
 
-"×Ô¶¯ÕÛĞĞ
+"è‡ªåŠ¨æŠ˜è¡Œ
 "set nowrap
 set wrap
-"°´ÍêÕûµ¥´ÊÕÛĞĞ
+"æŒ‰å®Œæ•´å•è¯æŠ˜è¡Œ
 set nolinebreak
 "set linebreak
-"ĞĞ¿í£¨ÊäÈëÊ±×Ô¶¯²åÈë»»ĞĞ·û£©
+"è¡Œå®½ï¼ˆè¾“å…¥æ—¶è‡ªåŠ¨æ’å…¥æ¢è¡Œç¬¦ï¼‰
 "set textwidth=80
 set textwidth=0
 
-" Ä¬ÈÏ´°¿Ú´óĞ¡£¬ÏÔÊ¾96ÁĞ£¬30ĞĞ
+" é»˜è®¤çª—å£å¤§å°ï¼Œæ˜¾ç¤º96åˆ—ï¼Œ30è¡Œ
 set columns=96
-"´úÂë³¤¶ÈÌáÊ¾
+"ä»£ç é•¿åº¦æç¤º
 "set colorcolumn=81
 set colorcolumn=90
 set lines=30
-" Ä¬ÈÏ´°¿ÚÎ»ÖÃ
+" é»˜è®¤çª—å£ä½ç½®
 winp 300 200
 
-"ÔÊĞíÔÚ Ğé¿Õ¼ä ÄÚ²Ù×÷ £¨Ğé¿Õ¼ä:²»°üº¬ÈÎºÎÎÄ±¾µÄ¿Õ¼ä¡£Èç»»ĞĞ·ûÖ®ºó£©
+"å…è®¸åœ¨ è™šç©ºé—´ å†…æ“ä½œ ï¼ˆè™šç©ºé—´:ä¸åŒ…å«ä»»ä½•æ–‡æœ¬çš„ç©ºé—´ã€‚å¦‚æ¢è¡Œç¬¦ä¹‹åï¼‰
 "set virtualedit=all
-"½ûÖ¹ÔÚ Ğé¿Õ¼ä ÄÚ²Ù×÷
+"ç¦æ­¢åœ¨ è™šç©ºé—´ å†…æ“ä½œ
 set virtualedit=
 
-"===Ëõ½øÉèÖÃ===
-set cindent             "´ò¿ªC/C++·ç¸ñµÄ×Ô¶¯Ëõ½ø
-set autoindent          "×Ô¶¯¶ÔÆë£¬½«µ±Ç°ĞĞ¶ÔÆë¸ñÊ½Ó¦ÓÃµ½ÏÂÒ»ĞĞ
+"===ç¼©è¿›è®¾ç½®===
+set cindent             "æ‰“å¼€C/C++é£æ ¼çš„è‡ªåŠ¨ç¼©è¿›
+set autoindent          "è‡ªåŠ¨å¯¹é½ï¼Œå°†å½“å‰è¡Œå¯¹é½æ ¼å¼åº”ç”¨åˆ°ä¸‹ä¸€è¡Œ
 "set noautoindent
-set smartindent         "ÖÇÄÜ¶ÔÆë£¬¸üºÃµÄÖ§³Ö´úÂë±àĞ´
-set cinoptions=:0g0t0(susj1   "Éè¶¨C/C++·ç¸ñ×Ô¶¯Ëõ½øµÄÑ¡Ïî
+set smartindent         "æ™ºèƒ½å¯¹é½ï¼Œæ›´å¥½çš„æ”¯æŒä»£ç ç¼–å†™
+set cinoptions=:0g0t0(susj1   "è®¾å®šC/C++é£æ ¼è‡ªåŠ¨ç¼©è¿›çš„é€‰é¡¹
 
-"Éè¶¨ Tab ¼üËõ½øµÄ¿Õ¸ñÊı
+"è®¾å®š Tab é”®ç¼©è¿›çš„ç©ºæ ¼æ•°
 set tabstop=4
-"Éè¶¨±à¼­Æ÷½«¶àÉÙ¿Õ¸ñÊÓÎªÒ»¸öËõ½ø
+"è®¾å®šç¼–è¾‘å™¨å°†å¤šå°‘ç©ºæ ¼è§†ä¸ºä¸€ä¸ªç¼©è¿›
 set shiftwidth=4
-"½«Ëõ½ø×ª»»Îª¿Õ¸ñ
+"å°†ç¼©è¿›è½¬æ¢ä¸ºç©ºæ ¼
 set expandtab
-"ÉèÖÃ°´ÍË¸ñ¼üÊ±¿ÉÒÔÒ»´ÎÉ¾³ı4¸ö¿Õ¸ñ
+"è®¾ç½®æŒ‰é€€æ ¼é”®æ—¶å¯ä»¥ä¸€æ¬¡åˆ é™¤4ä¸ªç©ºæ ¼
 set softtabstop=4
-"ÉèÖÃ°´ÍË¸ñ¼üÊ±¿ÉÒÔÒ»´ÎÉ¾³ı4¸ö¿Õ¸ñ
+"è®¾ç½®æŒ‰é€€æ ¼é”®æ—¶å¯ä»¥ä¸€æ¬¡åˆ é™¤4ä¸ªç©ºæ ¼
 set smarttab
-"½«Tab¼ü×Ô¶¯×ª»»³É¿Õ¸ñ ÕæÕıĞèÒªTab¼üÊ±Ê¹ÓÃ[Ctrl + V + Tab]
+"å°†Tabé”®è‡ªåŠ¨è½¬æ¢æˆç©ºæ ¼ çœŸæ­£éœ€è¦Tabé”®æ—¶ä½¿ç”¨[Ctrl + V + Tab]
 set expandtab
 %retab!
 
 
 
-"²åÈëÄ£Ê½ÏÂ£¬¡°¡û¡±ÈçºÎÉ¾³ı¹â±êÇ°µÄ×Ö·û£ºĞĞÊ×¿Õ°×¡¢»»ĞĞ·û¡¢²åÈëµãÖ®Ç°µÄ×Ö·û
+"æ’å…¥æ¨¡å¼ä¸‹ï¼Œâ€œâ†â€å¦‚ä½•åˆ é™¤å…‰æ ‡å‰çš„å­—ç¬¦ï¼šè¡Œé¦–ç©ºç™½ã€æ¢è¡Œç¬¦ã€æ’å…¥ç‚¹ä¹‹å‰çš„å­—ç¬¦
 set backspace=indent,eol,start
 
-"ÃüÁîĞĞÀúÊ·¼ÍÂ¼
+"å‘½ä»¤è¡Œå†å²çºªå½•
 set history=5000
 
-"½ûÓÃÔöÁ¿ËÑË÷
+"ç¦ç”¨å¢é‡æœç´¢
 set incsearch
 "set noincsearch
-"ËÑË÷Ê±ºöÂÔ´óĞ¡Ğ´
+"æœç´¢æ—¶å¿½ç•¥å¤§å°å†™
 "set ignorecase
 "set noignorecase
-"¸ßÁÁÏÔÊ¾ËÑË÷½á¹û hls
+"é«˜äº®æ˜¾ç¤ºæœç´¢ç»“æœ hls
 set hlsearch
-" ¸ßÁÁµ±Ç°ĞĞ
+" é«˜äº®å½“å‰è¡Œ
 " highlight CurrentLine guibg=darkgrey guifg=white
 " au! Cursorhold * exe 'match CurrentLine /\%' . line('.') . 'l.*/'
 " set ut=100
 "
 " set cursorcolumn
 set cursorline
-"Éè¶¨ÕÛµş·½Ê½
+"è®¾å®šæŠ˜å æ–¹å¼
 "set foldmethod=manual
 set foldmethod=syntax
 set foldlevel=6
 set foldcolumn=0
 
-"ÒÔÏÂ×Ö·û½«±»ÊÓÎªµ¥´ÊµÄÒ»²¿·Ö (ASCII)£º
+"ä»¥ä¸‹å­—ç¬¦å°†è¢«è§†ä¸ºå•è¯çš„ä¸€éƒ¨åˆ† (ASCII)ï¼š
 "set iskeyword+=33-47,58-64,91-96,123-128
-" ÉèÖÃ¿í¶È²»Ã÷µÄÎÄ×Ö(Èç ¡°¡±¢Ù¢Ú¡ú )ÎªË«¿í¶ÈÎÄ±¾¡£
+" è®¾ç½®å®½åº¦ä¸æ˜çš„æ–‡å­—(å¦‚ â€œâ€â‘ â‘¡â†’ )ä¸ºåŒå®½åº¦æ–‡æœ¬ã€‚
 " @see http://blog.sina.com.cn/s/blog_46dac66f010006db.html
 set ambiwidth=double
 
@@ -190,23 +191,23 @@ set guifontwide=Microsoft_Yahei_Mono:h10:cANSI,Fixedsys:h12
 
 
 "-------------------------------------------
-"   ¿ì½İ¼ü
+"   å¿«æ·é”®
 "-------------------------------------------
-"Ñ¡ÖĞÎÄ±¾Ê±Í¨¹ıTABÓëShift+TABËõ½ø
+"é€‰ä¸­æ–‡æœ¬æ—¶é€šè¿‡TABä¸Shift+TABç¼©è¿›
 vmap <tab> >gv
 vmap <s-tab> <gv
 
-" Ñ¡ÖĞÒ»¶ÎÎÄ×Ö²¢È«ÎÄËÑË÷Õâ¶ÎÎÄ×Ö
+" é€‰ä¸­ä¸€æ®µæ–‡å­—å¹¶å…¨æ–‡æœç´¢è¿™æ®µæ–‡å­—
 vnoremap  *  y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 vnoremap  #  y?<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
 
-" ´°¿Ú¼äµÄÒÆ¶¯ÉèÖÃ¡£
+" çª—å£é—´çš„ç§»åŠ¨è®¾ç½®ã€‚
 map <Leader>ww <C-W>w
-" = °ÑÊó±ê·ÅÔÚÊú·Ö¸ñÉÏÍù×óÍÏ
+" = æŠŠé¼ æ ‡æ”¾åœ¨ç«–åˆ†æ ¼ä¸Šå¾€å·¦æ‹–
 map <Leader>w, 10<C-W><
-" = °ÑÊó±ê·ÅÔÚÊú·Ö¸ñÉÏÍùÓÒÍÏ
+" = æŠŠé¼ æ ‡æ”¾åœ¨ç«–åˆ†æ ¼ä¸Šå¾€å³æ‹–
 map <Leader>w. 10<C-W>>
-" ¹Ø±Õµ±Ç°´°¿Ú
+" å…³é—­å½“å‰çª—å£
 map <Leader>wc <C-W>c
 " map <C-j> <C-W>j
 " map <C-k> <C-W>k
@@ -219,25 +220,25 @@ map <Leader>wc <C-W>c
 " map <C-S-kMinus> <C-w>_
 
 
-"ÔÚÃüÁîĞĞÄ£Ê½ÏÂ£¬ÓÃCtrl+VÌùÈë¼Ä´æÆ÷"ÖĞµÄÄÚÈİ
+"åœ¨å‘½ä»¤è¡Œæ¨¡å¼ä¸‹ï¼Œç”¨Ctrl+Vè´´å…¥å¯„å­˜å™¨"ä¸­çš„å†…å®¹
 cmap <C-V> <C-R>"
-"±àÒëºÍÔËĞĞjava
+"ç¼–è¯‘å’Œè¿è¡Œjava
 map <F3> :w<CR>:!javac %<CR><CR>
 map <F4> :!java %<<CR><CR>
-"´°¿Ú×î´ó»¯£¬×îĞ¡»¯£¬»¹Ô­
+"çª—å£æœ€å¤§åŒ–ï¼Œæœ€å°åŒ–ï¼Œè¿˜åŸ
 map <Leader>mx :simalt ~x<CR>
 map <Leader>mn :simalt ~n<CR>
 "recover
 map <Leader>re :simalt ~r<CR>
 
-" ÖØÖÃ×ÖÌåÉèÖÃ
+" é‡ç½®å­—ä½“è®¾ç½®
 map <Leader>fr :set guifont=<CR>:set gfw=<CR>
 
-"ÓÃCtrl+DÔÚ²åÈëÄ£Ê½ÏÂ²åÈëµ±Ç°Ê±¼ä
+"ç”¨Ctrl+Dåœ¨æ’å…¥æ¨¡å¼ä¸‹æ’å…¥å½“å‰æ—¶é—´
 "imap <C-D> --<C-R>=strftime("%c")<CR>--
 imap <C-D> <C-R>=strftime("%Y-%m-%d %H:%M:%S %A")<CR>
 
-"markdownµÄ±êÌâ
+"markdownçš„æ ‡é¢˜
 map <Leader>h2 <ESC>I## <ESC>
 vmap <Leader>h2 I## <ESC>gv
 map <Leader>h3 <ESC>I### <ESC>
@@ -246,7 +247,7 @@ map <Leader>h4 <ESC>I#### <ESC>
 vmap <Leader>h4 I#### <ESC>gv
 map <Leader>h5 <ESC>I##### <ESC>
 vmap <Leader>h5 I##### <ESC>gv
-" ·Ö¸ñÏß
+" åˆ†æ ¼çº¿
 map <Leader>fgx o* * *<ESC>o<ESC>
 
 "-------------------------------------------
@@ -278,21 +279,21 @@ endfunction
 
 
 "-------------------------------------------
-"   Vundle ÅäÖÃ
+"   Vundle é…ç½®
 "-------------------------------------------
 " Vundle
-" °²×°Ö®Ç°£¬ÔÚWindows»·¾³ÏÂ£¬ÊÇĞèÒªcurlµÄ¡£µ±ÎÒ°Ñgit/bin¼ÓÈëµ½PathÖ®ºó£¬Ò²ÊÇ¿ÉÒÔµÄ£»
-" ¹Ù·½ÊÇ¸øÁËÒ»¸ö½Å±¾È¥µ÷ÓÃcurl.exe
-" °²×°Vundle£º
-" ÔÚ×Ô¼ºµÄÓÃ»§Ä¿Â¼ÏÂ£¬Ò»°ã¾ÍÊÇÔËĞĞcmdÖ®ºóµÄÄ¬ÈÏÂ·¾¶
+" å®‰è£…ä¹‹å‰ï¼Œåœ¨Windowsç¯å¢ƒä¸‹ï¼Œæ˜¯éœ€è¦curlçš„ã€‚å½“æˆ‘æŠŠgit/binåŠ å…¥åˆ°Pathä¹‹åï¼Œä¹Ÿæ˜¯å¯ä»¥çš„ï¼›
+" å®˜æ–¹æ˜¯ç»™äº†ä¸€ä¸ªè„šæœ¬å»è°ƒç”¨curl.exe
+" å®‰è£…Vundleï¼š
+" åœ¨è‡ªå·±çš„ç”¨æˆ·ç›®å½•ä¸‹ï¼Œä¸€èˆ¬å°±æ˜¯è¿è¡Œcmdä¹‹åçš„é»˜è®¤è·¯å¾„
 " cd %userprofile%
 " cd %USERPROFILE%
 " git clone https://github.com/gmarik/Vundle.vim.git vimfiles/bundle/Vundle.vim
-" È»ºó¾Í±à¼­_vimrcÁË£¬ĞŞ¸ÄÁË rtp Óë path µÄ¶¨Òå·½Ê½£º 
-" ²Î¼û£º https://github.com/gmarik/Vundle.vim/wiki/Vundle-for-Windows
+" ç„¶åå°±ç¼–è¾‘_vimrcäº†ï¼Œä¿®æ”¹äº† rtp ä¸ path çš„å®šä¹‰æ–¹å¼ï¼š 
+" å‚è§ï¼š https://github.com/gmarik/Vundle.vim/wiki/Vundle-for-Windows
 "        https://github.com/gmarik/Vundle.vim
 
-" µÚÒ»ĞĞ¾ÍÉèÖÃÁË£¬ËùÒÔ£¬ÕâÀï²»ĞèÒªÁË
+" ç¬¬ä¸€è¡Œå°±è®¾ç½®äº†ï¼Œæ‰€ä»¥ï¼Œè¿™é‡Œä¸éœ€è¦äº†
 " set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -303,31 +304,65 @@ let path='~/vimfiles/bundle'
 "call vundle#begin('~/some/path/here')
 call vundle#begin(path)
 
-"  ÆäËüÆ½Ì¨³õÊ¼»¯·½Ê½
+"  å…¶å®ƒå¹³å°åˆå§‹åŒ–æ–¹å¼
 "set rtp+=~/.vim/bundle/Vundle.vim
 " call vundle#begin()
 "
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" vim-markdown²å¼ş£¬ÓÃÀ´¸ßÁÁmarkdownÎÄ¼şµÄ
+" vim-markdownæ’ä»¶ï¼Œç”¨æ¥é«˜äº®markdownæ–‡ä»¶çš„
 " https://github.com/plasticboy/vim-markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " ftplugin/mkd.vim : line 315 : let &winwidth=(&columns/4)  
-" ÕâÑù×Ó :TocµÄÊ±ºò²»»áÕ¼°ë¸öÆÁ£¬Õ¼1/4¸öÆÁ
-" Ô­±¾Îª2
+" è¿™æ ·å­ :Tocçš„æ—¶å€™ä¸ä¼šå åŠä¸ªå±ï¼Œå 1/4ä¸ªå±
+" åŸæœ¬ä¸º2
 
-" spring ÅäÉ«·½°¸
+" spring é…è‰²æ–¹æ¡ˆ
 Plugin 'spring.vim'
+
+" è®©gvimå…¨å±çš„æ’ä»¶ï¼Œé€šè¿‡ Vundleå®‰è£…ä¹‹åä¸å¤ªå¥½ä½¿ï¼Œéœ€å°†gvimfullscreen.dllæ‰‹åŠ¨å¤åˆ¶åˆ°ä¸gvim.exeç›¸åŒ
+" çš„ç›®å½•
+Plugin 'gvimfullscreen_win32'
+
+" è®©æ–‡å­—ä»¬å±…ä¸­æ˜¾ç¤º
+Plugin 'junegunn/goyo.vim'
+" ##Usage
+" 
+" :Goyo
+" Toggle Goyo
+" :Goyo [width]
+" Turn on or resize Goyo
+" :Goyo!
+" Turn Goyo off
+" The window can be resized with the usual [count]<CTRL-W> + >, <, +, - keys.
+" 
+" ##Configuration
+" 
+" g:goyo_width (default: 80)
+" g:goyo_margin_top (default: 4)
+" g:goyo_margin_bottom (default: 4)
+" g:goyo_linenr (default: 0)
+let g:goyo_width=96
+let g:goyo_margin_top=2
+let g:goyo_margin_bottom=2
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-" °²×°²å¼şÃÇ£º 
-" ÔËĞĞvimÖ®ºó  :PluginInstall
+" å®‰è£…æ’ä»¶ä»¬ï¼š 
+" è¿è¡Œvimä¹‹å  :PluginInstall
 
-"°Ñ°²×°µÄspringÅäÉ«ÓÃÆğÀ´
+"æŠŠå®‰è£…çš„springé…è‰²ç”¨èµ·æ¥
 " colorscheme spring
 "-------------------------------------------
+"
 
+" let g:MyVimLib = $VIMRUNTIME.'/gvimfullscreen.dll'
+" let g:MyVimLib = '~/vimfiles/bundle/gvimfullscreen_win32/gvimfullscreen.dll'
+" function ToggleFullScreen()
+"     call libcallnr(g:MyVimLib, "ToggleFullScreen", 0)
+" endfunction
+map <F11> <Esc>:set guioptions-=m<cr><Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+"map <F11> <Esc>:call ToggleFullScreen()<CR>
