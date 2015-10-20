@@ -122,7 +122,7 @@ set columns=96
 set colorcolumn=90
 set lines=30
 " 默认窗口位置
-winp 300 200
+winp 200 100
 
 "允许在 虚空间 内操作 （虚空间:不包含任何文本的空间。如换行符之后）
 "set virtualedit=all
@@ -364,5 +364,53 @@ filetype plugin indent on    " required
 " function ToggleFullScreen()
 "     call libcallnr(g:MyVimLib, "ToggleFullScreen", 0)
 " endfunction
-map <F11> <Esc>:set guioptions-=m<cr><Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+map <F11> <Esc>:set guioptions-=mr<cr><Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 "map <F11> <Esc>:call ToggleFullScreen()<CR>
+"
+
+
+" Markdown调用Chrome浏览器预览
+function! s:nr2hex(nr)
+  let n = a:nr
+  let r = ""
+  while n
+    let r = '0123456789ABCDEF'[n % 16] . r
+    let n = n / 16
+  endwhile
+  return r
+endfunction
+
+function! s:encodeURIComponent(instr)
+  let instr = iconv(a:instr, &enc, "utf-8")
+  let len = strlen(instr)
+  let i = 0
+  let outstr = ''
+  while i < len
+    let ch = instr[i]
+    if ch =~# '[0-9A-Za-z-._~!''()*]'
+      let outstr = outstr . ch
+    elseif ch == ' '
+      let outstr = outstr . '+'
+    else
+      let outstr = outstr . '%' . substitute('0' . s:nr2hex(char2nr(ch)), '^.*\(..\)$', '\1', '')
+    endif
+    let i = i + 1
+  endwhile
+  return outstr
+endfunction
+
+
+function! MarkdownPro()
+    let chrome = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+    let filed = expand("%:p")
+    let filed = s:encodeURIComponent(filed)
+    let filed = substitute(filed,"%3A",":","g")
+    let filed = substitute(filed,"%5C","/","g")
+    let filed = substitute(filed,"%","\\\\%","g")
+    let filed = substitute(filed,"+","\\\\%20","g")
+    "echo filed
+    return chrome." \"file:///".filed."\""
+endfunction
+
+"map <Leader>p :!start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" :echo EncodeURIComponent(%:p)<CR>
+map <Leader>p :silent !start <C-R>=MarkdownPro()<CR><CR><CR>
