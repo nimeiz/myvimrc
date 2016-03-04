@@ -311,6 +311,14 @@ call vundle#begin(path)
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" 自动新建文件夹
+
+Plugin 'auto_mkdir'
+
+"Plugin 'lokaltog/vim-powerline'
+
+"let g:Powerline_symbols = 'fancy'
+
 " vim-markdown插件，用来高亮markdown文件的
 " https://github.com/plasticboy/vim-markdown
 Plugin 'godlygeek/tabular'
@@ -319,6 +327,13 @@ Plugin 'plasticboy/vim-markdown'
 " ftplugin/mkd.vim : line 315 : let &winwidth=(&columns/4)  
 " 这样子 :Toc的时候不会占半个屏，占1/4个屏
 " 原本为2
+
+
+" 加入NERDTree
+Plugin 'scrooloose/nerdtree' 
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-f> :NERDTreeToggle<CR>
 
 " spring 配色方案
 Plugin 'spring.vim'
@@ -349,6 +364,9 @@ let g:goyo_width=96
 let g:goyo_margin_top=2
 let g:goyo_margin_bottom=2
 
+" 多点编辑插件
+" https://github.com/terryma/vim-multiple-cursors
+Plugin 'terryma/vim-multiple-cursors' 
 call vundle#end()            " required
 filetype plugin indent on    " required
 " 安装插件们： 
